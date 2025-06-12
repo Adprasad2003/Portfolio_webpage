@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile Page</title>
+  <style>
+    @page {
+      size: 22in 36in;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: transparent;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .window-size {
+      width: 600px;
+      height: 900px;
+      margin: auto;
+      border: 1px solid gray;
+      padding: 30px;
+      box-sizing: border-box;
+      background-color: rgb(197, 234, 246);
+    }
+
+    h1 {
+      text-align: center;
+      color: darkblue;
+      font-size: 40px;
+    }
+
+    .profile {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: none;
+      border-radius: 0;
+    }
+
+    .intro {
+      text-align: justify;
+      font-size: 16px;
+      margin: 20px 0;
+    }
+
+    .hello-button {
+      display: inline-block;
+      margin: 10px auto;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background-color: #fdf5d9;
+      cursor: pointer;
+    }
+
+    .hello-button:hover {
+      background-color: #f7ecb7;
+    }
+
+    h2 {
+      color: darkblue;
+      font-size: 32px;
+      margin: 20px 10px 5px 10px;
+      text-align: left;
+    }
+
+    form {
+      margin: 0 10px;
+      text-align: left;
+      max-width: 200px;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    input, textarea {
+      text-align: left;
+      width: 100%;
+      padding: 6px;
+      margin-top: 6px;
+      box-sizing: border-box;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+
+    button[type="submit"] {
+      margin-top: 15px;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 4px;
+      background-color: white;
+      border: 1px solid #444;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #f2f2f2;
+    }
+
+    .note {
+      text-align: left;
+      font-size: 14px;
+      color: gray;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="window-size">
+    <h1>Welcome to My Profile Page</h1>
+
+    <div class="profile">
+      <img src="adp.jpg" alt="Profile Photo" />
+    </div>
+
+    <div class="intro">
+      Hi I am A. Durga Prasad. I completed B.Tech. I am attending BFSI classes at BVRITH. I like to talk to my friends and play games in my free time.
+    </div>
+
+    <div style="text-align: center;">
+      <button class="hello-button" onclick="sayHello()">Say Hello</button>
+    </div>
+
+    <h2>Contact Me</h2> 
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder=" " required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder=" " required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="5" placeholder=" " required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function sayHello() {
+      const name = prompt("What is your name?");
+      if (name) {
+        alert("Hello, " + name + "!");
+      }
+    }
+  </script>
+</body>
+</html>
+
